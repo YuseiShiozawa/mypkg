@@ -1,6 +1,6 @@
 import rclpy                     
 from rclpy.node import Node      
-from person_msgs.msg import Query 
+from person_msgs.srv import Query 
 
 
 def cb(request, response):
