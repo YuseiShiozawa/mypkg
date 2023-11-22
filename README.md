@@ -4,6 +4,16 @@
 
 ロボットシステム学のros練習
 
+## インストール手順
+下記の通りクローンし,リポジトリ内にて実行してください.
+```bash
+$ git clone https://github.com/YuseiShiozawa/mypkg.git
+$ cd mypkg
+```
+
+## テスト環境
+* Ubuntu 20.04
+
 ## 権利関係
 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
