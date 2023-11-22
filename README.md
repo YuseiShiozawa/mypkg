@@ -1,4 +1,7 @@
 # mypkg
+
+[![test](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml)
+
 ロボットシステム学のros練習
 
 ## 権利関係
