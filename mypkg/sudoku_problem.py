@@ -30,7 +30,7 @@ def main():
         rclpy.init()
         node = Node('sudoku_problem')
         sudoku_problem = SudokuPub(node)
-        rclpy.spin(node)
+        rclpy.spin_once(node)
 
 
 if __name__ == '__main__':
