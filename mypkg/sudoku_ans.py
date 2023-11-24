@@ -27,7 +27,7 @@ class SudokuSub():
             print(num, end=" ")
             if k % 4 == 0:
                 print()
-            print()
+        print()
     
         if data[1] == answer1[1]:
             if numbers == answer1:
