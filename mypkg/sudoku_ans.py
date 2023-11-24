@@ -48,7 +48,7 @@ def main():
     rclpy.init()
     node = Node('sudoku_ans')
     sudoku_ans = SudokuGameSubscriber(node)
-    rclpy.spin(node)
+    rclpy.spin_once(node)
     rclpy.shutdown()
 
 if __name__ == '__main__':
