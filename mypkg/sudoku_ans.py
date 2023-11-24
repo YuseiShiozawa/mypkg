@@ -20,8 +20,6 @@ class SudokuGameSubscriber():
         #print(data[2])
         print('Received Sudoku Problem:')
         for i in range(4):
-            #for j in range(4):
-                #number = int(input("数字を入力してください: "))
             input_str = input(f"{i+1}行目の数字を入力して: ")
             number = [int(num) for num in input_str.split()]
             print(number)
@@ -56,6 +54,7 @@ def main():
     node = Node('sudoku_ans')
     sudoku_ans = SudokuGameSubscriber(node)
     rclpy.spin(node)
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

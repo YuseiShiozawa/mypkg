@@ -31,6 +31,7 @@ def main():
     node = Node('sudoku_problem')
     sudoku_problem = SudokuGamePublisher(node)
     rclpy.spin_once(node)
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

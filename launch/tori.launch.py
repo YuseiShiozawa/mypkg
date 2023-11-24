@@ -1,8 +1,5 @@
-import launch
-import launch.actions
-import launch.substitutions
-import launch_ros.actions
-
+from launch import LaunchDescription
+from launch_ros.actions import Node
 
 def generate_launch_description():
     sudoku_ans = launch_ros.actions.Node(
@@ -13,7 +10,7 @@ def generate_launch_description():
     sudoku_problem = launch_ros.actions.Node(
             package='mypkg',
             executable='sudoku_problem',
-            #output='screen'
+            output='screen'
             )
 
     return launch.LaunchDescription([sudoku_ans, sudoku_problem])
