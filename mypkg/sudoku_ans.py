@@ -49,7 +49,6 @@ def main():
     node = Node('sudoku_ans')
     sudoku_ans = SudokuGameSubscriber(node)
     rclpy.spin_once(node)
-    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
