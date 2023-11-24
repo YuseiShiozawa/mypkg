@@ -25,6 +25,8 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
+            'sudoku_problem = mypkg.sudoku_problem:main',
+            'sudoku_ans = mypkg.sudoku_ans:main',
         ],
     },
 )

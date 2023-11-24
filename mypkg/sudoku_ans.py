@@ -1,37 +1,60 @@
 import rclpy
 from rclpy.node import Node
-from sudoku_msgs.msg import SudokuProblem, SudokuSolution
+from sudoku_msgs.msg import Problem
+import random
+import time
 
-class SudokuGameSubscriber(Node):
-    def __init__(self):
-        super().__init__('sudoku_game_subscriber')
-        self.subscription = self.create_subscription(SudokuProblem, 'sudoku_problem', self.callback, 10)
-        self.publisher = self.create_publisher(SudokuSolution, 'sudoku_solution', 10)
+class SudokuGameSubscriber():
+    def __init__(self, node):
+        self.publisher = node.create_subscription(Problem, 'sudoku_problem', self.callback, 10)
+        print("....")
 
     def callback(self, msg):
-        sudoku_problem = msg.problem
-        self.get_logger().info('Received Sudoku Problem:')
-        self.print_sudoku(sudoku_problem)
-        self.solve_and_publish_solution(sudoku_problem)
-
-    def solve_and_publish_solution(self, sudoku_problem):
-        solution = [[3, 1, 4, 2], [4, 2, 1, 3], [2, 3, 0, 1], [1, 4, 3, 0]]
+        #resudoku_problem = msg.problem
+        data = msg.problem
+        answer1 = [1, 2, 3, 4, 4, 3, 2, 1, 2, 1, 4, 3, 3, 4, 1, 2]
+        answer2 = [4, 1, 3, 2, 3, 2, 4, 1, 2, 3, 1, 4, 1, 4, 2, 3]
+        answer3 = [2, 4, 1, 3, 3, 1, 4, 2, 4, 2, 3, 1, 1, 3, 2, 4]
+        numbers = []
+        #print(data[2])
+        print('Received Sudoku Problem:')
+        for i in range(4):
+            #for j in range(4):
+                #number = int(input("数字を入力してください: "))
+            input_str = input(f"{i+1}行目の数字を入力して: ")
+            number = [int(num) for num in input_str.split()]
+            print(number)
+            numbers.extend(number)
+            
+        print()  # 改行
+        for k, num in enumerate(numbers, 1):
+            print(num, end=" ")
+            if k % 4 == 0:
+                print()
+        #print(numbers)
+        #print(answer)
+        print()
         
-        sudoku_solution_msg = SudokuSolution(solution=solution)
-        self.publisher.publish(sudoku_solution_msg)
-        self.get_logger().info('Published Sudoku Solution:')
-        self.print_sudoku(solution)
-
-    def print_sudoku(self, sudoku):
-        for row in sudoku:
-            self.get_logger().info(row)
-
-def main(args=None):
-    rclpy.init(args=args)
-    subscriber_node = SudokuGameSubscriber()
-    rclpy.spin(subscriber_node)
-    subscriber_node.destroy_node()
-    rclpy.shutdown()
+        if data[1] == answer1[1]:
+            if numbers == answer1:
+                print("correct")
+            else:
+                print("no")
+        elif data[1] == answer2[1]:
+            if numbers == answer2:
+                print("correct")
+            else:
+                print("no")
+        elif data[1] == answer3[1]:
+            if numbers == answer3:
+                print("correct")
+            else:
+                print("no")
+def main():
+    rclpy.init()
+    node = Node('sudoku_ans')
+    sudoku_ans = SudokuGameSubscriber(node)
+    rclpy.spin(node)
 
 if __name__ == '__main__':
     main()
