@@ -1,7 +1,7 @@
 # mypkg
-
 [![test](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml)
 
+[![test](https://github.com/YuseiShiozawa/mypkg/actions/workflows/sudoku_test.yml/badge.svg)](https://github.com/YuseiShiozawa/mypkg/actions/workflows/sudoku_test.yml)
 ロボットシステム学のros練習
 
 ## インストール手順
