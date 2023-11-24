@@ -5,8 +5,8 @@ import random
 import time
 
 class SudokuSub():
-    def __init__(self, msg):
-        self.publisher = node.create_subcription(Problem, 'sudoku_problem', self.callback, 10)
+    def __init__(self, node):
+        self.publisher = node.create_subscription(Problem, 'sudoku_problem', self.callback, 10)
         print("....")
 
     def callback(self, msg):
