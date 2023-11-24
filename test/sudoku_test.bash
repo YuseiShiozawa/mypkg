@@ -11,5 +11,5 @@ cd src/mypkg/test/
 ros2 run mypkg sudoku_ans < 'sudoku_ans.txt' &
 ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 
-cat /tmp/mypkg.log | grep 'uho'
-#grep '....'
+cat /tmp/mypkg.log | 
+grep '....'
