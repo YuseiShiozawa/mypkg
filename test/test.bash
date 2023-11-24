@@ -8,9 +8,9 @@ colcon build
 
 source $dir/.bashrc
 
-cd src/mypkg/test/
-echo "read" > "option.txt"
-ls option.txt
+#cd src/mypkg/test/
+#echo "read" > "option.txt"
+#ls option.txt
 #timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 ros2 run mypkg sudoku_ans < 'sudoku.txt' &
 ros2 run mypkg sudoku_problem > /tmp/mypkg.log
