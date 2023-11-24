@@ -15,11 +15,11 @@ class SudokuSub():
         answer2 = [4, 1, 3, 2, 3, 2, 4, 1, 2, 3, 1, 4, 1, 4, 2, 3]
         answer3 = [2, 4, 1, 3, 3, 1, 4, 2, 4, 2, 3, 1, 1, 3, 2, 4]
         numbers = []
-        print("問題:")
+        #print("問題を受け取りました:")
         for i in range(4):
             answers = input(f"{i+1}行目の数字を入力:")
             number = [int(num) for num in answers.split()]
-            print(number)
+            #print(number)
             numbers.extend(number)
 
         print()
