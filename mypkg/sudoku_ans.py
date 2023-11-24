@@ -12,6 +12,7 @@ class SudokuGameSubscriber():
     def callback(self, msg):
         #resudoku_problem = msg.problem
         data = msg.problem
+        #time.sleep(3)
         answer1 = [1, 2, 3, 4, 4, 3, 2, 1, 2, 1, 4, 3, 3, 4, 1, 2]
         answer2 = [4, 1, 3, 2, 3, 2, 4, 1, 2, 3, 1, 4, 1, 4, 2, 3]
         answer3 = [2, 4, 1, 3, 3, 1, 4, 2, 4, 2, 3, 1, 1, 3, 2, 4]
