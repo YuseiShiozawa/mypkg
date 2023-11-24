@@ -20,5 +20,5 @@ ros2 run mypkg sudoku_problem
 #cat /tmp/mypkg.log | grep "...."
 #cat /tmp/mypkg.log
 #cat /tmp/mypkg.log | grep "0"
-cat /tmp/mypkg.log | grep 'no'
+cat /tmp/mypkg.log | grep '0'
 
