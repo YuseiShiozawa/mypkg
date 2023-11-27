@@ -9,14 +9,15 @@ colcon build
 source $dir/.bashrc
 
 cd src/mypkg/test/
-ros2 run mypkg sudoku_ans < 'sudoku.txt' & 
+ros2 run mypkg sudoku_ans < 'sudoku.txt' > /tmp/mypkg.log & 
 ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 #ros2 run mypkg sudoku_ans < 'sudoku.txt' > /tmp/mypkg.log
 #> /tmp/mypkg.log
 #cat /tmp/mypkg.log |
 #grep 'Listen: 10'
-#cat /tmp/mypkg.log | grep "...."
+cat /tmp/mypkg.log | grep "...."
 #cat /tmp/mypkg.log
 #cd $dir/ros2_ws
-cat /tmp/mypkg.log | grep "0"
+#cat /tmp/mypkg.log | grep "0"
+cat /tmp/mypkg.log | grep "no"
 
