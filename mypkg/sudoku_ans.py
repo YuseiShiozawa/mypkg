@@ -15,12 +15,13 @@ class SudokuGameSubscriber():
         answer2 = [4, 1, 3, 2, 3, 2, 4, 1, 2, 3, 1, 4, 1, 4, 2, 3]
         answer3 = [2, 4, 1, 3, 3, 1, 4, 2, 4, 2, 3, 1, 1, 3, 2, 4]
         numbers = []
+        numbers = [0, 0, 0, 0]
         print('Received Sudoku Problem:')
         for i in range(4):
             input_str = input(f"{i+1}行目の数字を入力して: ")
             number = [int(num) for num in input_str.split()]
             print(number)
-            numbers.extend(number)
+            #numbers.extend(number)
             
         print()  # 改行
         for k, num in enumerate(numbers, 1):
