@@ -17,5 +17,6 @@ ros2 run mypkg sudoku_ans < 'sudoku.txt' > /tmp/mypkg.log
 #grep 'Listen: 10'
 #cat /tmp/mypkg.log | grep "...."
 #cat /tmp/mypkg.log
+cd $dir/ros2_ws
 cat /tmp/mypkg.log | grep "no"
 
