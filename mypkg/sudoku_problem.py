@@ -6,7 +6,7 @@ import random
 class SudokuGamePublisher():
     def __init__(self, node):
         self.publisher = node.create_publisher(Int32MultiArray, 'sudoku_problem', 10)
-        #node.create_timer(3, self.publish_sudoku_problem)
+        node.create_timer(2, self.publish_sudoku_problem)
 
     def publish_sudoku_problem(self):
         problems = [
