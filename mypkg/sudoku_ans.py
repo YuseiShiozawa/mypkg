@@ -28,28 +28,35 @@ class SudokuGameSubscriber():
             if k % 4 == 0:
                 print()
         print()
-        
+        test = 0
         if data[1] == answer1[1]:
             if numbers == answer1:
                 print("correct")
             else:
+                test = 1
                 print("no")
         elif data[1] == answer2[1]:
             if numbers == answer2:
                 print("correct")
             else:
+                test = 1
                 print("no")
         elif data[1] == answer3[1]:
             if numbers == answer3:
                 print("correct")
             else:
+                test = 1
                 print("no")
+
 def main():
     rclpy.init()
+    test = 0
     node = Node('sudoku_ans')
     sudoku_ans = SudokuGameSubscriber(node)
+    print("ok")
+    if test == 1:
+        print("test")  
     rclpy.spin_once(node)
-
 if __name__ == '__main__':
     main()
 
