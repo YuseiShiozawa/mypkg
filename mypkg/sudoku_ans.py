@@ -14,8 +14,7 @@ class SudokuGameSubscriber():
         answer1 = [1, 2, 3, 4, 4, 3, 2, 1, 2, 1, 4, 3, 3, 4, 1, 2]
         answer2 = [4, 1, 3, 2, 3, 2, 4, 1, 2, 3, 1, 4, 1, 4, 2, 3]
         answer3 = [2, 4, 1, 3, 3, 1, 4, 2, 4, 2, 3, 1, 1, 3, 2, 4]
-        #numbers = []
-        numbers = [0, 0, 0, 0]
+        numbers = []
         print('Received Sudoku Problem:')
         for i in range(4):
             input_str = input(f"{i+1}行目の数字を入力して: ")
