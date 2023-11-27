@@ -56,6 +56,7 @@ def main():
     print("ok")
     if test == 1:
         print("test")  
+
     rclpy.spin_once(node)
 if __name__ == '__main__':
     main()
