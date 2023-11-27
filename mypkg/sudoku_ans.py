@@ -1,16 +1,16 @@
 import rclpy
 from rclpy.node import Node
-from sudoku_msgs.msg import Problem
+from std_msgs.msg import Int32MultiArray
 import random
 import time
 
 class SudokuGameSubscriber():
     def __init__(self, node):
-        self.publisher = node.create_subscription(Problem, 'sudoku_problem', self.callback, 10)
+        self.publisher = node.create_subscription(Int32MultiArray, 'sudoku_problem', self.callback, 10)
         print("....")
 
     def callback(self, msg):
-        data = msg.problem
+        data = msg.data
         answer1 = [1, 2, 3, 4, 4, 3, 2, 1, 2, 1, 4, 3, 3, 4, 1, 2]
         answer2 = [4, 1, 3, 2, 3, 2, 4, 1, 2, 3, 1, 4, 1, 4, 2, 3]
         answer3 = [2, 4, 1, 3, 3, 1, 4, 2, 4, 2, 3, 1, 1, 3, 2, 4]
