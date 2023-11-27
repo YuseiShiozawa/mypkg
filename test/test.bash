@@ -9,9 +9,8 @@ colcon build
 source $dir/.bashrc
 echo -e "0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0" > 'sudoku1.txt'
 #cd src/mypkg/test/
-ros2 run mypkg sudoku_ans < 'sudoku1.txt' > /tmp/mypkg.log & 
-ros2 run mypkg sudoku_problem 
-#> /tmp/mypkg.log
+ros2 run mypkg sudoku_ans < 'sudoku1.txt' & 
+ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 #& cd $dir/ros2_ws & 
 #ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 #ros2 run mypkg sudoku_ans < 'sudoku.txt' > /tmp/mypkg.log
