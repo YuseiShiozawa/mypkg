@@ -20,3 +20,4 @@ ros2 run mypkg sudoku_ans < 'sudoku.txt'
 #cd $dir/ros2_ws
 #cat /tmp/mypkg.log | grep "...."
 
+
