@@ -13,7 +13,7 @@ def generate_launch_description():
     sudoku_problem = launch_ros.actions.Node(
             package='mypkg',
             executable='sudoku_problem',
-            #output='screen'
+            output='screen'
             )
 
     return launch.LaunchDescription([sudoku_ans, sudoku_problem])

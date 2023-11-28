@@ -11,7 +11,10 @@ echo -e "0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n" > 'sudoku1.txt'
 #cd src/mypkg/test/
 ##ros2 run mypkg sudoku_ans < 'sudoku1.txt' & 
 ##ros2 run mypkg sudoku_problem > /tmp/mypkg.log
-timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py < 'sudoku1.txt' > /tmp/mypkg.log
+##timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py < 'sudoku1.txt' > /tmp/mypkg.log
+####timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py > /tmp/mypkg.log
+ros2 run mypkg sudoku_ans > /tmp/mypkg.log & 
+ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 #& cd $dir/ros2_ws & 
 #ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 #ros2 run mypkg sudoku_ans < 'sudoku.txt' > /tmp/mypkg.log
@@ -22,7 +25,7 @@ timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py < 'sudoku1.txt' > /tmp
 #cat /tmp/mypkg.log
 #cd $dir/ros2_ws
 ##cat /tmp/mypkg.log | grep "0"
-cat /tmp/mypkg.log | grep "...."
+cat /tmp/mypkg.log | grep "no"
 cat /tmp/mypkg.log | grep "Received"
 #cat /tmp/mypkg.log | grep "no"
 

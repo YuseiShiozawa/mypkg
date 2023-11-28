@@ -17,7 +17,10 @@ class SudokuGameSubscriber():
         numbers = []
         print('Received Sudoku Problem:')
         for i in range(4):
-            input_str = input(f"{i+1}行目の数字を入力して: ")
+            try:
+                input_str = input(f"{i+1}行目の数字を入力して: ")
+            except:
+                input_str = "0 0 0 0"
             number = [int(num) for num in input_str.split()]
             print(number)
             numbers.extend(number)
