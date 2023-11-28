@@ -12,7 +12,7 @@ source $dir/.bashrc
 ##ros2 run mypkg sudoku_ans < 'sudoku1.txt' & 
 ##ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 ##timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py < 'sudoku1.txt' > /tmp/mypkg.log
-####timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py > /tmp/mypkg.log
+####ros2 launch mypkg sudoku_ans_problem.launch.py > /tmp/mypkg.log
 ros2 run mypkg sudoku_ans > /tmp/mypkg.log & 
 ros2 run mypkg sudoku_problem 
 #> /tmp/mypkg.log
@@ -27,8 +27,8 @@ ros2 run mypkg sudoku_problem
 #cd $dir/ros2_ws
 ##cat /tmp/mypkg.log | grep "0"
 #cat /tmp/mypkg.log | grep "not correct"
-cat /tmp/mypkg.log | grep "Game finish"
-#cat /tmp/mypkg.log | grep "Received"
+#cat /tmp/mypkg.log | grep "Game finish"
+cat /tmp/mypkg.log | grep "Received"
 #cat /tmp/mypkg.log | grep "no"
 
 
