@@ -13,6 +13,7 @@ source $dir/.bashrc
 ##ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 ##timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py < 'sudoku1.txt' > /tmp/mypkg.log
 timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py > /tmp/mypkg.log
+#( ros2 launch mypkg sudoku_ans_problem.launch.py & sleep 5 < 'sudoku1.txt' ) > /tmp/mypkg.log
 ####ros2 run mypkg sudoku_ans > /tmp/mypkg.log & 
 ####ros2 run mypkg sudoku_problem 
 #> /tmp/mypkg.log
