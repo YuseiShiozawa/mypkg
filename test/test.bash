@@ -9,8 +9,9 @@ colcon build
 source $dir/.bashrc
 echo -e "0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n" > 'sudoku1.txt'
 #cd src/mypkg/test/
-timeout 10 ros2 run mypkg sudoku_ans < 'sudoku1.txt' & 
-ros2 run mypkg sudoku_problem > /tmp/mypkg.log
+##ros2 run mypkg sudoku_ans < 'sudoku1.txt' & 
+##ros2 run mypkg sudoku_problem > /tmp/mypkg.log
+timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py < 'sudoku1.txt' > /tmp/mypkg.log
 #& cd $dir/ros2_ws & 
 #ros2 run mypkg sudoku_problem > /tmp/mypkg.log
 #ros2 run mypkg sudoku_ans < 'sudoku.txt' > /tmp/mypkg.log
