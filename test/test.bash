@@ -23,6 +23,7 @@ timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py < 'sudoku1.txt' > /tmp
 #cd $dir/ros2_ws
 ##cat /tmp/mypkg.log | grep "0"
 cat /tmp/mypkg.log | grep "...."
+cat /tmp/mypkg.log | grep "Received"
 #cat /tmp/mypkg.log | grep "no"
 
 
