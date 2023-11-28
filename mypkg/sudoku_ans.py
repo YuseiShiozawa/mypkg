@@ -46,6 +46,7 @@ class SudokuGameSubscriber():
                 print("correct")
             else:
                 print("not correct")
+        print("Game finish")
 
 def main():
     rclpy.init()
