@@ -35,17 +35,17 @@ class SudokuGameSubscriber():
             if numbers == answer1:
                 print("correct")
             else:
-                print("no")
+                print("not correct")
         elif data[1] == answer2[1]:
             if numbers == answer2:
                 print("correct")
             else:
-                print("no")
+                print("not correct")
         elif data[1] == answer3[1]:
             if numbers == answer3:
                 print("correct")
             else:
-                print("no")
+                print("not correct")
 
 def main():
     rclpy.init()
