@@ -20,7 +20,7 @@ class SudokuGameSubscriber():
             input_str = input(f"{i+1}行目の数字を入力して: ")
             number = [int(num) for num in input_str.split()]
             print(number)
-            numbers.extend(number)
+            #numbers.extend(number)
             
         print()  # 改行
         for k, num in enumerate(numbers, 1):
@@ -49,6 +49,7 @@ def main():
     node = Node('sudoku_ans')
     sudoku_ans = SudokuGameSubscriber(node)
     rclpy.spin_once(node)
+
 if __name__ == '__main__':
     main()
 
