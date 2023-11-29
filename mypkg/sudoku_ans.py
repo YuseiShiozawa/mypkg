@@ -46,6 +46,9 @@ class SudokuSub():
                 print("Correct")
             else:
                 print("Miss")
+        print()
+        print("待機中....")
+
 def main():
     rclpy.init()
     node = Node('sudoku_ans')
