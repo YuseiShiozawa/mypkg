@@ -7,10 +7,11 @@ cd $dir/ros2_ws
 colcon build
 
 source $dir/.bashrc
-cd src/mypkg/test/
-ros2 run mypkg sudoku_ans < 'sudoku_ans.txt' &
-ros2 run mypkg sudoku_problem > /tmp/mypkg.log
+#cd src/mypkg/test/
+#ros2 run mypkg sudoku_ans &
+#ros2 run mypkg sudoku_problem > /tmp/mypkg.log
+timeout 10 ros2 launch mypkg sudoku_ans_problem.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log | 
-grep '待機中....'
+grep 'Received'
 
