@@ -44,11 +44,12 @@ $ git clone https://github.com/YuseiShiozawa/mypkg.git
 実行後,上記のように出力される
 
 ### sudoku_problemとsudoku_ans
-
+* ミニ数独(オリジナル)
+4×4のマスに1~4の数字が縦,横,斜めに同じ数字が存在しないように数値を入力する. 0は本来の数独でいう空白という扱いで解答者(あなた)が入力する数値.
 
 ```bash
 端末1$ ros2 run mypkg sudoku_ans
-.... 
+待機中.... 
 ```
 待機中....がターミナルに表示されたら端末2でsudoku_problemを実行する.
 
