@@ -21,7 +21,6 @@ class SudokuSub():
         numbers = []
         print("Received")
         for i in range(4):
-            #try:
             wait = threading.Thread(target=lambda:
             setattr(threading.current_thread(), 'answers',input(f"{i+1}行目の数字を入力:")))
             wait.start()
@@ -61,6 +60,8 @@ class SudokuSub():
         print("待機中....")
 
 def main():
+    #global flag
+    #flag = 5
     rclpy.init()
     node = Node('sudoku_ans')
     sudoku_ans = SudokuSub(node)
