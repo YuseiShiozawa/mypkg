@@ -49,7 +49,7 @@ $ git clone https://github.com/YuseiShiozawa/mypkg.git
 ```
 
 ### sudoku_problemとsudoku_ans
-ミニ数独(オリジナル):
+ミニ数独(オリジナル):  
 4×4のマスに1~4の数字が縦,横,斜めに同じ数字が存在しないように数値を入力する. 0は本来の数独での空白という扱いで解答者(あなた)が入力する数値とする.
 
 ```bash
