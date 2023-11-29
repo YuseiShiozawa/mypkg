@@ -19,12 +19,11 @@ class SudokuSub():
         numbers = []
         print("Received")
         for i in range(4):
-            try:
-                answers = input(f"{i+1}行目の数字を入力:")
-            except:
-                answers = "0 0 0 0"
+            #try:
+            answers = input(f"{i+1}行目の数字を入力:")
+            #except:
+            #answers = "0 0 0 0"
             number = [int(num) for num in answers.split()]
-            #print(number)
             numbers.extend(number)
 
         print()
