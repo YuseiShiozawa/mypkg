@@ -44,11 +44,13 @@ $ git clone https://github.com/YuseiShiozawa/mypkg.git
 実行後,上記のように出力される
 
 ### sudoku_problemとsudoku_ans
+
+
 ```bash
 端末1$ ros2 run mypkg sudoku_ans
 .... 
 ```
-....がターミナルに表示されたら端末2でsudoku_problemを実行する.
+待機中....がターミナルに表示されたら端末2でsudoku_problemを実行する.
 
 ```bash
 端末2$ ros2 run mypkg sudoku_problem
