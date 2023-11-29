@@ -42,11 +42,26 @@ $ git clone https://github.com/YuseiShiozawa/mypkg.git
                          .
                          .
 ```
-実行後,上記のように出力される
+実行後,上記のように出力される. 終了するときは`Ctrl+C`
 
 * `ros2 launch`で実行する方法
 ```bash
+$ ros2  launch mypkg talk_listen.launch.py
+[INFO] [launch]: All log files can be found below /home/shiozawa/.ros/log/2023-11-30-03-00-30-886468-shiopc-14400
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [talker-1]: process started with pid [14402]
+[INFO] [listener-2]: process started with pid [14404]
+[listener-2] [INFO] [1701280831.771362748] [listener]: Listen: 0
+[listener-2] [INFO] [1701280832.253171938] [listener]: Listen: 1
+[listener-2] [INFO] [1701280832.753223990] [listener]: Listen: 2
+[listener-2] [INFO] [1701280833.252446603] [listener]: Listen: 3
+[listener-2] [INFO] [1701280833.752907282] [listener]: Listen: 4
+[listener-2] [INFO] [1701280834.253602883] [listener]: Listen: 5
+                         .
+                         .
+                         .
 ```
+実行後,上記のように出力される. 終了するときは`Ctrl+C`
 
 ### sudoku_problemとsudoku_ans
 ミニ数独(オリジナル):  
