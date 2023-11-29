@@ -13,5 +13,5 @@ source $dir/.bashrc
 timeout 25 ros2 launch mypkg sudoku_ans_problem.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log | 
-grep "Received"
+grep "Miss"
 
