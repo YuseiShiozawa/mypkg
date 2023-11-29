@@ -24,7 +24,7 @@ class SudokuSub():
             wait = threading.Thread(target=lambda:
             setattr(threading.current_thread(), 'answers',input(f"{i+1}行目の数字を入力:")))
             wait.start()
-            wait.join(timeout=5)
+            wait.join(timeout=60)
             if wait.is_alive():
                 setattr(wait, 'answers', "0 0 0 0")
             answers = getattr(wait, 'answers')
@@ -56,8 +56,8 @@ class SudokuSub():
                 print("Correct")
             else:
                 print("Miss")
-        print()
-        print("待機中....")
+        #print()
+        #print("待機中....")
 
 def main():
     #global flag
