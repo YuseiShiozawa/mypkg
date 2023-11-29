@@ -58,7 +58,7 @@ $ git clone https://github.com/YuseiShiozawa/mypkg.git
 1 0 0 0
 ```
 
-端末1に戻るとReceivedが表示されていることが確認でき,解答の入力を求められる
+端末1に戻るとReceivedが表示されていることが確認でき,解答の入力を求められる. 各行の数値を下記のように入力後,解答の正誤が表示される.
 
 ```bash
 Received:
