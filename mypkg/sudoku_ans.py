@@ -6,6 +6,7 @@ from std_msgs.msg import Int32MultiArray
 #from sudoku_msgs.msg import Problem
 import random
 import time
+import threading
 
 class SudokuSub():
     def __init__(self, node):
@@ -21,9 +22,16 @@ class SudokuSub():
         print("Received")
         for i in range(4):
             #try:
-            answers = input(f"{i+1}行目の数字を入力:")
+            wait = threading.Thread(target=lambda:
+            setattr(threading.current_thread(), 'answers',input(f"{i+1}行目の数字を入力:")))
+            wait.start()
+            wait.join(timeout=5)
+            if wait.is_alive():
+                setattr(wait, 'answers', "0 0 0 0")
+            answers = getattr(wait, 'answers')
+            #answers = input(f"{i+1}行目の数字を入力:")
             #except:
-            #answers = "0 0 0 0"
+                #answers = "0 0 0 0"
             number = [int(num) for num in answers.split()]
             numbers.extend(number)
 
