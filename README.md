@@ -46,7 +46,7 @@ $ git clone https://github.com/YuseiShiozawa/mypkg.git
 
 * `ros2 launch`で実行する方法
 ```bash
-$ ros2  launch mypkg talk_listen.launch.py
+$ ros2 launch mypkg talk_listen.launch.py
 [INFO] [launch]: All log files can be found below /home/shiozawa/.ros/log/2023-11-30-03-00-30-886468-shiopc-14400
 [INFO] [launch]: Default logging verbosity is set to INFO
 [INFO] [talker-1]: process started with pid [14402]
