@@ -9,7 +9,7 @@ import time
 class SudokuSub():
     def __init__(self, node):
         self.publisher = node.create_subscription(Problem, 'sudoku_problem', self.callback, 10)
-        print("....")
+        print("待機中....")
 
     def callback(self, msg):
         data = msg.problem
