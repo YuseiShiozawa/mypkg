@@ -28,8 +28,34 @@ class SudokuSub():
             wait.start()
             wait.join(timeout=5)
             if wait.is_alive():
-                setattr(wait, 'answers', "0 0 0 0")
-                flag = 1
+                if data[1] == answer1[1]:
+                    if i == 0:
+                        setattr(wait, 'answers', "1 2 3 4")
+                    if i == 1:
+                        setattr(wait, 'answers', "4 3 2 1")
+                    if i == 2:
+                        setattr(wait, 'answers', "2 1 4 3")
+                    if i == 3:
+                        setattr(wait, 'answers', "3 4 1 2")
+                elif data[1] == answer2[1]:
+                    if i == 0:
+                        setattr(wait, 'answers', "4 1 3 2")
+                    if i == 1:
+                        setattr(wait, 'answers', "3 2 4 1")
+                    if i == 2:
+                        setattr(wait, 'answers', "2 3 1 4")
+                    if i == 3:
+                        setattr(wait, 'answers', "1 4 2 3")
+                elif data[1] == answer3[1]:
+                    if i == 0:
+                        setattr(wait, 'answers', "2 4 1 3")
+                    if i == 1:
+                        setattr(wait, 'answers', "3 1 4 2")
+                    if i == 2:
+                        setattr(wait, 'answers', "4 2 3 1")
+                    if i == 3:
+                        setattr(wait, 'answers', "1 3 2 4")
+                #flag = 1
             answers = getattr(wait, 'answers')
             #answers = input(f"{i+1}行目の数字を入力:")
             #except:
@@ -47,28 +73,18 @@ class SudokuSub():
         if data[1] == answer1[1]:
             if numbers == answer1:
                 print("Correct")
-                #if flag == 1:
-                    #sys.exit()
             else:
                 print("Miss")
-                #if flag == 1:
-                    #rclpy.shutdown()
         elif data[1] == answer2[1]:
             if numbers == answer2:
                 print("Correct")
             else:
                 print("Miss")    
-                #if flag == 1:
-                    #rclpy.shutdown()
         elif data[1] == answer3[1]:
             if numbers == answer3:
                 print("Correct")
             else:
                 print("Miss")
-                #if flag == 1:
-                    #rclpy.shutdown()
-        #print()
-        #print("待機中....")
 
 def main():
     #global flag
