@@ -26,7 +26,7 @@ class SudokuSub():
             wait = threading.Thread(target=lambda:
             setattr(threading.current_thread(), 'answers',input(f"{i+1}行目の数字を入力:")))
             wait.start()
-            wait.join(timeout=5)
+            wait.join(timeout=60)
             if wait.is_alive():
                 if data[1] == answer1[1]:
                     if i == 0:
