@@ -103,6 +103,7 @@ Correct
 
 ## テスト環境
 * Ubuntu 20.04
+* ROS2 foxy
 
 ## 権利関係
 
