@@ -21,9 +21,12 @@
 * サブスクライバを持つノード. トピック`/sudoku_problem`から数独の問題を受け取り,解答者(あなた)がターミナルの標準入力から解答を入力し,その正誤判定を行う.
 
 ## インストール手順
-
+ROS2のワークスペース内のsrcディレクトリにてパッケージをクローンした後、ROS2のワークスペースにてビルドする.
 ```bash
+$ cd ros2_ws/src
 $ git clone https://github.com/YuseiShiozawa/mypkg.git
+$ cd ~/ros2_ws
+$ colcon build
 ```
 
 ## 実行手順
@@ -65,7 +68,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ### sudoku_problemとsudoku_ans
 ミニ数独(オリジナル):  
-4×4のマスに1~4の数字が縦,横,斜めに同じ数字が存在しないように数値を入力する. 0は本来の数独での空白という扱いで解答者(あなた)が入力する数値とする. 問題は全3種.
+4×4のマスに1~4の数字が縦,横,斜めに同じ数字が存在しないように数値を入力する. 0は本来の数独での空白という扱いで,解答者(あなた)が入力する数値である. 問題は全3種.
 
 ```bash
 端末1$ ros2 run mypkg sudoku_ans
