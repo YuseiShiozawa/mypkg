@@ -7,6 +7,7 @@ from std_msgs.msg import Int32MultiArray
 import random
 import time
 import threading
+import sys
 
 class SudokuSub():
     def __init__(self, node):
@@ -15,6 +16,7 @@ class SudokuSub():
 
     def callback(self, msg):
         data = msg.data
+        flag = 0
         answer1 = [1, 2, 3, 4, 4, 3, 2, 1, 2, 1, 4, 3, 3, 4, 1, 2]
         answer2 = [4, 1, 3, 2, 3, 2, 4, 1, 2, 3, 1, 4, 1, 4, 2, 3]
         answer3 = [2, 4, 1, 3, 3, 1, 4, 2, 4, 2, 3, 1, 1, 3, 2, 4]
@@ -24,9 +26,10 @@ class SudokuSub():
             wait = threading.Thread(target=lambda:
             setattr(threading.current_thread(), 'answers',input(f"{i+1}行目の数字を入力:")))
             wait.start()
-            wait.join(timeout=60)
+            wait.join(timeout=5)
             if wait.is_alive():
                 setattr(wait, 'answers', "0 0 0 0")
+                flag = 1
             answers = getattr(wait, 'answers')
             #answers = input(f"{i+1}行目の数字を入力:")
             #except:
@@ -44,18 +47,26 @@ class SudokuSub():
         if data[1] == answer1[1]:
             if numbers == answer1:
                 print("Correct")
+                #if flag == 1:
+                    #sys.exit()
             else:
                 print("Miss")
+                #if flag == 1:
+                    #rclpy.shutdown()
         elif data[1] == answer2[1]:
             if numbers == answer2:
                 print("Correct")
             else:
                 print("Miss")    
+                #if flag == 1:
+                    #rclpy.shutdown()
         elif data[1] == answer3[1]:
             if numbers == answer3:
                 print("Correct")
             else:
                 print("Miss")
+                #if flag == 1:
+                    #rclpy.shutdown()
         #print()
         #print("待機中....")
 
