@@ -1,8 +1,6 @@
 # mypkg
 [![test](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml) [![test](https://github.com/YuseiShiozawa/mypkg/actions/workflows/sudoku_test.yml/badge.svg)](https://github.com/YuseiShiozawa/mypkg/actions/workflows/sudoku_test.yml)
 
-ロボットシステム学のros2練習
-
 # リポジトリ内のノード,ファイル一覧
 
 ### talker.py
@@ -18,7 +16,7 @@
 * パブリッシャを持つノード. 数独の問題をトピック`/sudoku_problem`を通じて送信する.
 
 ### sudoku_ans.py
-* サブスクライバを持つノード. トピック`/sudoku_problem`から数独の問題を受け取り,解答者(あなた)がターミナルの標準入力から解答を入力し,その正誤判定を行う.
+* サブスクライバを持つノード. トピック`/sudoku_problem`から数独の問題を受け取り,解答者(あなた)がターミナルの標準入力から解答を入力することで,その正誤判定を行う.
 
 ## 実行手順
 ### talkerとlistener
