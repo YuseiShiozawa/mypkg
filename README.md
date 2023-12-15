@@ -90,6 +90,9 @@ Received
 Correct
 ```
 
+## 必要なソフトウェア
+* Python
+
 ## テスト環境
 * Ubuntu 20.04
 * ROS2 foxy
