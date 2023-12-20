@@ -10,7 +10,7 @@
 * サブスクライバを持つノード. トピック`/countup`からメッセージを受け取り表示する
 
 ### talk_listen.launch.py
-* talker.pyとlistener.pyを一度に立ち上げるファイル.
+* talker.pyとlistener.pyを一度に立ち上げる.
 
 ### sudoku_problem.py
 * パブリッシャを持つノード. 数独の問題をトピック`/sudoku_problem`を通じて送信する.
