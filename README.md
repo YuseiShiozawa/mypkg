@@ -1,7 +1,7 @@
 # mypkg
 [![test](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/YuseiShiozawa/mypkg/actions/workflows/test.yml) [![test](https://github.com/YuseiShiozawa/mypkg/actions/workflows/sudoku_test.yml/badge.svg)](https://github.com/YuseiShiozawa/mypkg/actions/workflows/sudoku_test.yml)
 
-# リポジトリ内のノード,ファイル一覧
+## リポジトリ内のノード,ファイル一覧
 
 ### talker.py
 * パブリッシャを持つノード. 数字をカウントしてトピック`/countup`を通じて送信する.
