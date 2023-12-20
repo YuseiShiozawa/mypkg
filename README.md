@@ -20,7 +20,7 @@ ROS 2 のパッケージ
    * トピックに流れるメッセージの型は32ビットの符号付き整数の配列.
 
 ### sudoku_ans.py
-* サブスクライバを持つノード. トピック`/sudoku_problem`から数独の問題を受け取り,解答者(あなた)がターミナルの標準入力から解答を入力することで,その正誤判定を行う.
+* サブスクライバを持つノード. トピック`/sudoku_problem`から数独の問題を受け取り, 解答者(あなた)がターミナルの標準入力から解答を入力することで, その正誤判定を行う.
 
 ## 実行手順
 ### talkerとlistener
@@ -38,7 +38,7 @@ ROS 2 のパッケージ
                          .
                          .
 ```
-実行後,上記のように出力される. 終了するときは`Ctrl+C`
+実行後, 上記のように出力される. 終了するときは`Ctrl+C`
 
 * `ros2 launch`で実行する方法
 ```bash
@@ -57,11 +57,11 @@ $ ros2 launch mypkg talk_listen.launch.py
                          .
                          .
 ```
-実行後,上記のように出力される. 終了するときは`Ctrl+C`
+実行後, 上記のように出力される. 終了するときは`Ctrl+C`
 
 ### sudoku_problemとsudoku_ans
 ミニ数独(オリジナル):  
-4×4のマスに1~4の数字が縦,横,斜めに同じ数字が存在しないように数値を入力する. 0は本来の数独での空白という扱いで,解答者(あなた)が入力する数値である. 問題は全3種.
+4×4のマスに1~4の数字が縦, 横, 斜めに同じ数字が存在しないように数値を入力する. 0は本来の数独での空白という扱いで, 解答者(あなた)が入力する数値である. 問題は全3種.
 
 ```bash
 端末1$ ros2 run mypkg sudoku_ans
@@ -77,7 +77,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 1 0 0 0
 ```
 
-端末1に戻るとReceivedが表示され,解答の入力を求められる. 解答時間は1分. 各行の数値を下記のように入力後,解答の正誤が表示される. また,解答時間を過ぎてしまうと答えが表示される.
+端末1に戻るとReceivedが表示され, 解答の入力を求められる. 解答時間は1分. 各行の数値を下記のように入力後, 解答の正誤が表示される. また, 解答時間を過ぎてしまうと答えが表示される.
 
 ```bash
 Received
@@ -103,8 +103,8 @@ Correct
 
 ## 権利関係
 
-* このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-* このパッケージのコードの一部は，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
+* このソフトウェアパッケージは, 3条項BSDライセンスの下, 再頒布および使用が許可されます．
+* このパッケージのコードの一部は, 下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを, 本人の許可を得て自身の著作としたものです．
    * [ryuichiueda/my_slides/robosys_2022/lesson8](https://ryuichiueda.github.io/my_slides/robosys_2022/lesson8.html#/)
    * [ryuichiueda/my_slides/robosys_2022/lesson9](https://ryuichiueda.github.io/my_slides/robosys_2022/lesson9.html#/)
    * [ryuichiueda/my_slides/robosys_2022/lesson10](https://ryuichiueda.github.io/my_slides/robosys_2022/lesson10.html#/)
